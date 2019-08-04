@@ -26,3 +26,9 @@ This script remaps those keys to:
 This is, of course, configurable to your desires, but note: *You cannot remap the a key to itself with hammerspoon (a bug, in my opinion), so you can't do something like `edc okm` because it intercepts the default map.*  Unfortunately, you can't leave it unmapped, or it won't work correctly with multiple concurrent inputs.
 
 This script can be adapted to fit any program which has different behavior for multiple simultaneous keypresses.
+
+### Key Queue
+
+In order to make this remapping work, I had to program in a queue of keys to be sent when a key is released.  This means that instead of multi-key commands being sent based on a time interval, all the pressed-down keys are sent when a key is released.
+
+The unintentional effect of this is that the user experience of typing braille in this particular case is far more pleasurable - no longer do I feel rushed when I am unsure which keys to press together, and it doesn't make a difference when typing quickly.
